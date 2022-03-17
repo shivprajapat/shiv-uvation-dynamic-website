@@ -1,10 +1,14 @@
-import { Routes, Route } from "react-router-dom";
-import HomePage from './Pages/HomePage';
-function App() {
+import React from "react";
+import Routers from "./Routes/Routers";
+import ScrollToTop from "./ScrollToTop";
+import { BrowserRouter } from "react-router-dom";
+
+const App = () => {
   return (
-    <Routes>
-      <Route path='/' element={<HomePage />} />
-    </Routes>
+    <BrowserRouter>
+      <Routers />
+      <ScrollToTop />
+    </BrowserRouter>
   );
 }
 

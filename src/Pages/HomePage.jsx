@@ -1,7 +1,14 @@
 import React from 'react'
 
-export default function Home() {
+import { Landingpage } from './Home/Landingpage';
+
+const HomePage = () => {
+
   return (
-    <div>Home</div>
+    <div>
+      <Landingpage />
+    </div>
   )
 }
+
+export default HomePage
