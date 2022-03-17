@@ -8,7 +8,6 @@ const initialAddCreditCard = {
 
 const initialState = {
   ...initialAddCreditCard,
-  url: '',
   error: false,
   landingData: { landingPage: true },
 };
@@ -19,8 +18,18 @@ const landingPageReducer = (state = initialState, action) => {
     case UserActionTypes.LANDING_PAGE_DATA_START:
       return {
         ...state,
-        url: '',
         error: false,
+      };
+
+    case UserActionTypes.LANDING_PAGE_DATA_SUCCEEDED:
+      return {
+        ...state,
+        landingData: { ...action.payload, landingPage: false }
+      }
+    case UserActionTypes.LANDING_PAGE_DATA_FAILED:
+      return {
+        ...state,
+        error: true,
       };
     default:
       return state;
