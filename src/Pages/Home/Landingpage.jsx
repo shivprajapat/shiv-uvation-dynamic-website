@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux';
 import { landingPageDataStart } from '../../redux/action/index';
-
+import { Grid, Row } from 'carbon-components-react';
 export function Landingpage() {
     const { landingData } = useSelector((state) => state.landingPageReducer)
     const dispatch = useDispatch();
@@ -10,8 +10,17 @@ export function Landingpage() {
     }, [dispatch])
 
     return (
-        <div>
-            <h1>{landingData.banner_heading}</h1>
-        </div>
+        <section>
+            <Grid fullWidth className='homepage' condensed>
+
+                <Row
+                    className='landing_div'
+                    style={{
+                        backgroundImage: `url(${landingData && landingData.banner_image})`,
+                    }}
+                >
+                </Row>
+            </Grid>
+        </section>
     )
 }

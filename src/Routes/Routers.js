@@ -1,10 +1,16 @@
+import React, { Suspense } from 'react';
 import { Routes, Route } from "react-router-dom";
-import HomePage from '../Pages/HomePage';
+import { Loading } from 'carbon-components-react';
+
+const HomePage = React.lazy(() => import('../Pages/HomePage'));
+
 const Routers = () => {
     return (
-        <Routes>
-            <Route path='/' element={<HomePage />} />
-        </Routes>
+        <Suspense fallback={<Loading />}>
+            <Routes>
+                <Route path='/' element={<HomePage />} />
+            </Routes>
+        </Suspense>
     );
 }
 

@@ -13,7 +13,7 @@ const initialState = {
 };
 
 const landingPageReducer = (state = initialState, action) => {
-  console.log(state, 'action');
+  // console.log(state, 'action');
   switch (action.type) {
     case UserActionTypes.LANDING_PAGE_DATA_START:
       return {

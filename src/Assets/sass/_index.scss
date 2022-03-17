@@ -1,0 +1,14 @@
+@import "./global";
+@import 'carbon-components/scss/globals/scss/styles.scss';
+@import '@carbon/grid/scss/grid';
+@import '@carbon/layout/scss/layout';
+@import '@carbon/type/scss/type';
+@import '@carbon/colors/scss/colors';
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@300&display=swap');
+
+$feature-flags: (
+  ui-shell: true,
+  grid-columns-16: true,
+);
+

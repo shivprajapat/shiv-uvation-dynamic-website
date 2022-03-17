@@ -1,0 +1,41 @@
+/* Global CSS */
+h1 {
+  font-size: 38px;
+}
+h2 {
+  font-size: 48px;
+}
+h3 {
+  font-size: 40px;
+}
+h4 {
+  font-size: 24px;
+}
+h5 {
+  font-size: 24px;
+}
+h6 {
+  font-size: 20px;
+}
+p {
+  font-size: 16px;
+  line-height: 26px;
+}
+
+/* Heading */
+.heading_tab {
+  position: relative;
+  margin: auto auto 40px;
+  max-width: 450px;
+  &:after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  .heading {
+    position: relative;
+    text-transform: capitalize;
+    font-weight: 600;
+  }
+  }
+

@@ -1,0 +1,32 @@
+/*-----------------------------------------------------------
+* Template Name    : Uvation Website
+* Auther Name      : Shiv Kumar Prajapat
+* File Description : This files Includes all Style CSS
+*------------------------------------------------------------*/
+
+/*======================================================================
+ Table of Content:
+
+=================================
+  Components CSS
+=================================
+
+01. Base
+02. Variables
+03. Mixins
+04. Utils
+05. Header
+06. Home
+
+ ========================================================================*/
+
+@import "./base/base";
+
+// import abstracts
+@import "./abstracts/mixins";
+
+// import utils
+@import "./utils/utils";
+
+// import Pages
+@import "./pages/landingPage";;
