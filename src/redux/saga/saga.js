@@ -1,7 +1,7 @@
 import { put, takeLatest, all, call } from 'redux-saga/effects';
-import actionTypes from '../action/types';
-import { HomeData } from '../API/service';
-import { landingPageDataSuccess, landingPageDataError } from '../action';
+import actionTypes from '../actions/types';
+import { HomeData } from '../../API/service';
+import { landingPageDataSuccess, landingPageDataError } from '../actions';
 
 function* watchLandingPageData() {
     yield takeLatest(

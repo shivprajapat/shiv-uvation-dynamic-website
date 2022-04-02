@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux';
-import { landingPageDataStart } from '../../redux/action/index';
+import { landingPageDataStart } from '../../Redux/actions';
 import { Grid, Row } from 'carbon-components-react';
 export function Landingpage() {
     const { landingData } = useSelector((state) => state.landingPageReducer)
@@ -12,7 +12,6 @@ export function Landingpage() {
     return (
         <section>
             <Grid fullWidth className='homepage' condensed>
-
                 <Row
                     className='landing_div'
                     style={{

@@ -1,4 +1,4 @@
-import UserActionTypes from '../action/types';
+import UserActionTypes from '../actions/types';
 
 const initialAddCreditCard = {
   addCreditCard: {

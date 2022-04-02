@@ -12,17 +12,3 @@ export const landingPageDataSuccess = (data) => ({
 export const landingPageDataError = () => ({
   type: actionTypes.LANDING_PAGE_DATA_FAILED,
 });
-
-
-export const historyPageDataStart = () => ({
-  type: actionTypes.HISTORY_PAGE_DATA_START,
-});
-
-export const historyPageDataSuccess = (data) => ({
-  type: actionTypes.HISTORY_DATA_SUCCEEDED,
-  payload: data,
-});
-
-export const historyPageDataError = () => ({
-  type: actionTypes.HISTORY_DATA_FAILED,
-});
