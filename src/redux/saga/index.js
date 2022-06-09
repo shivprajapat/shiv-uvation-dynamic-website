@@ -1,6 +1,6 @@
 import { put, takeLatest, all, call } from 'redux-saga/effects';
 import actionTypes from '../actions/types';
-import { HomeData } from '../../API/service';
+import { HomeData } from '../../Api';
 import { landingPageDataSuccess, landingPageDataError } from '../actions';
 
 function* watchLandingPageData() {
@@ -14,7 +14,7 @@ function* fetchLandingPageDataAsync() {
     try {
         const response = yield call(HomeData.fetchHomeData);
         const { data } = response;
-        console.log("home page data data =>", data);
+        console.log("show the redux saga =>", data);
         yield put(landingPageDataSuccess(data));
     } catch (error) {
         yield put(landingPageDataError());

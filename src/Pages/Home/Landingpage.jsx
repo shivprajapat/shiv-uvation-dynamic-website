@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux';
-import { landingPageDataStart } from '../../Redux/actions';
+import { landingPageDataStart } from '../../redux/actions';
 import { Grid, Row } from 'carbon-components-react';
 import { H1 } from '../../ui'
 export function Landingpage() {

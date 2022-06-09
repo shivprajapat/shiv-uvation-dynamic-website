@@ -1,5 +1,5 @@
 import React from "react";
-import Routers from "./Routes/Routers";
+import Routers from "./Routes";
 import ScrollToTop from "./ScrollToTop";
 import { BrowserRouter } from "react-router-dom";
 const App = () => {
