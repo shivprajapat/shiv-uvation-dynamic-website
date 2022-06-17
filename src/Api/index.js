@@ -1,13 +1,13 @@
 
 import axios from 'axios';
-export const NEW_API_URL = 'https://cms.uvation.com/all-apis-new/?method';
 
 /**
  * @param  {HomeData}
  */
 
 export const HomeData = {
-    fetchHomeData: () => {
-        return axios.get(`${NEW_API_URL}=home_page&section_name=section1`);
+    fetchHomeData: async () => {
+        return await axios.get(`${process.env.REACT_APP_API_END_POINT}home_page&section_name=section1`);
     },
+
 }

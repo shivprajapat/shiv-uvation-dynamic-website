@@ -1,36 +1,26 @@
-import UserActionTypes from '../actions/types';
-
-const initialAddCreditCard = {
-  addCreditCard: {
-    isLoading: false,
-  },
-};
+import actionTypes from '../actions/types';
 
 const initialState = {
-  ...initialAddCreditCard,
+
   error: false,
-  landingData: { landingPage: true },
+  islandingPage: true,
+  landingData: [],
 };
 
 const landingPageReducer = (state = initialState, action) => {
   // console.log(state, 'action');
   switch (action.type) {
-    case UserActionTypes.LANDING_PAGE_DATA_START:
-      return {
-        ...state,
-        error: false,
-      };
+    case actionTypes.LANDING_PAGE_DATA_START:
+      return {...state,error: false,};
 
-    case UserActionTypes.LANDING_PAGE_DATA_SUCCEEDED:
+    case actionTypes.LANDING_PAGE_DATA_SUCCEEDED:
       return {
         ...state,
-        landingData: { ...action.payload, landingPage: false }
+        landingData: action.payload,
+         islandingPage: false 
       }
-    case UserActionTypes.LANDING_PAGE_DATA_FAILED:
-      return {
-        ...state,
-        error: true,
-      };
+    case actionTypes.LANDING_PAGE_DATA_FAILED:
+      return { ...state, error: true,islandingPage: false, };
     default:
       return state;
   }
